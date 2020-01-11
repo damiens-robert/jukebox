@@ -1,0 +1,67 @@
+{
+  "name": "ondoreact",
+  "displayName": "OnDoReact Project",
+  "version": "0.1.0",
+  "description": "A Cordova Application built with ReactJS and Onsen-UI.",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "webpack --config webpack.dev.js",
+    "build-prod": "webpack --config webpack.prod.js",
+    "serve": "cordova run browser",
+    "dev": "npm run build-dev && npm run serve",
+    "prod-browser": "npm run build-prod && cordova build browser",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "mkdir -p www"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damiens-robert/ondoreact.git"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Damiens ROBERT",
+  "bugs": {
+    "url": "https://github.com/damiens-robert/ondoreact/issues"
+  },
+  "dependencies": {
+    "cordova-plugin-whitelist": "^1.3.4",
+    "formik": "^2.0.6",
+    "onsenui": "^2.9.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-onsenui": "^1.10.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-standalone": "^6.26.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.5.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "cordova-plugin-whitelist": "1",
+    "css-loader": "^3.2.0",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "requirejs": "^2.3.6",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": []
+  }
+}

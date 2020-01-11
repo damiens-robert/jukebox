@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- 
+	    @TODO:
+
+	    - Set all the Content-Security-Policy unused to 'none'
+     htmlWebpackPlugin
+        .tags
+	.headTags
+	.filter((tag) => tag.tagName === 'meta')
+	.join('')
+    -->
+    <% 
+    for (let [key, value] of Object.entries(htmlWebpackPlugin.options.meta)) {
+    %>
+      <% 
+      if ("Content-Security-Policy" === key) {
+      %>
+        <meta 
+	  <%
+	  for (let [k,v] of  Object.entries(value)) {
+          %>
+	    <%= k %>="<%= v%>"
+          <%
+	  }
+	  %>
+	>
+      <%	  
+      } else if ("charset" === key) {
+      %>
+        <meta <%= key %>="<%= value %>">
+      <%
+      } else {
+      %>
+        <meta name="<%= key %>" content="<%= value %>"> 
+      <%
+      }
+    }
+    %>
+    <link rel="icon" type="image/png" href="icon.png" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body id="deviceready">
+      <div id="app" name="<%= htmlWebpackPlugin.options.title %>"> </div>
+      <script type="text/javascript" src="js/loader.js"></script>
+  </body> 
+</html>
