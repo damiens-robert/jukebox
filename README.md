@@ -12,6 +12,6 @@ OnDoReact is a Template for building a Cordova application that uses React and O
 
 ```
 npm install
-cordova platfrom add browser
+cordova platform add browser
 npm run dev
-´´´
+```
