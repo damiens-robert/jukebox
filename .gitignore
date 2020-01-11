@@ -1,10 +1,9 @@
 # Cordova
-
+hooks/
 plugins/
 platforms/
 www/
 
 # NodeJS
-
 node_modules/
 
