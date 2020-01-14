@@ -2,7 +2,7 @@
 
 ## Description
 
-OnDoReact is a Template for building a Cordova application that uses React and Onsen-UI.
+Jukebox application built with [OnDoReact](https://github.com/damiens-robert/ondoreact).
 
 ## Prerequesites
 
